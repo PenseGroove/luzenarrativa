@@ -63,6 +63,7 @@ h3{font-size:20px;margin:0 0 8px}
 .foot{padding:36px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 .login{max-width:440px;margin:80px auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px}
 input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;margin:6px 0 14px}
+.box2{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:16px}
 .err{color:var(--red);font-size:14px;min-height:20px}
 .app{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 60px)}
 .side{background:#fff;border-right:1px solid var(--line);padding:22px}
@@ -150,22 +151,22 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <h3>Curso de iluminação</h3>
 <div class="price">R$ 3.750</div>
 <ul><li>4 encontros presenciais individuais</li><li>Plataforma com material e exercícios</li><li>Checklists de set para levar na gravação</li><li>Projeto final com feedback</li></ul>
-<a class="btn dark" href="https://buy.stripe.com/test_eVq14o1dkf7qeMSdu78Vi00">Quero o curso</a>
+<a class="btn dark" href="#/pagar/iluminacao">Quero o curso</a>
 </div>
 <div class="offer best">
 <h3>Pacote completo</h3>
 <div class="save">Os três juntos: o caminho inteiro, na ordem certa</div>
-<div class="price"><span class="strike" style="font-size:20px;font-weight:400">R$ 5.330</span><br>R$ 4.997 <small>à vista no Pix ou no cartão</small></div>
+<div class="price"><span class="strike" style="font-size:20px;font-weight:400">R$ 5.330</span><br>R$ 4.997 <small>à vista no Pix</small></div>
 <ul><li><b>Curso de iluminação</b> (R$ 3.750)</li><li><b>Consultoria de compra de equipamentos</b> (R$ 690)</li><li><b>Curso de narrativa</b> (R$ 890)</li><li>Acesso a todos os módulos na plataforma</li><li>Economia de R$ 333 em relação aos itens separados</li></ul>
-<a class="btn" href="https://buy.stripe.com/test_cNifZi2hogbucEKfCf8Vi06">Quero o pacote completo</a>
+<a class="btn" href="#/pagar/iluminacao+equipamentos+narrativa">Quero o pacote completo</a>
 </div>
 <div class="offer">
 <h3>Complementos avulsos</h3>
 <div class="price">R$ 690 <small>equipamentos</small></div>
 <div class="price" style="margin-top:0">R$ 890 <small>narrativa</small></div>
 <ul><li><b>Consultoria de compra de equipamentos:</b> análise do que você já tem, do seu tipo de trabalho e do orçamento. Você recebe uma lista priorizada em três faixas (o essencial agora, o próximo passo e o que pode esperar), com o motivo de cada item e o que não comprar.</li><li><b>Curso de narrativa:</b> como estruturar um vídeo com começo, conflito e resolução, construir ritmo no roteiro e na montagem, escolher o que entra e o que sai, e usar luz, som e enquadramento a serviço da história.</li></ul>
-<a class="btn dark" href="https://buy.stripe.com/test_dRmdRa2ho8J29sydu78Vi01">Consultoria de equipamentos</a>
-<a class="btn dark" style="margin-top:8px" href="https://buy.stripe.com/test_9B6dRa09gaRa206cq38Vi02">Curso de narrativa</a>
+<a class="btn dark" href="#/pagar/equipamentos">Consultoria de equipamentos</a>
+<a class="btn dark" style="margin-top:8px" href="#/pagar/narrativa">Curso de narrativa</a>
 </div>
 </div>
 <div class="offer" style="margin-top:28px;color:var(--ink)" id="builder">
@@ -178,7 +179,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 </div>
 <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px">
 <div><div style="font-size:13px;color:var(--muted)">Total</div><div class="price" style="margin:0" id="bTotal">R$ 3.750</div><div id="bNote" style="font-size:14px;color:#7a4b06;min-height:20px"></div></div>
-<a class="btn" id="bBtn" href="https://buy.stripe.com/test_eVq14o1dkf7qeMSdu78Vi00">Pagar R$ 3.750</a>
+<a class="btn" id="bBtn" href="#/pagar/iluminacao">Pagar R$ 3.750</a>
 </div>
 </div>
 <p style="color:#9a958b;font-size:14px;margin-top:22px">Após o pagamento, você recebe seu código de acesso à plataforma e o contato para agendar o primeiro encontro. Vagas individuais, limitadas pela agenda do professor.</p>
@@ -199,7 +200,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <details><summary>Como funcionam os encontros?</summary><p>São individuais e presenciais, com data e horário combinados após a confirmação do pagamento.</p></details>
 <details><summary>Como acesso o material?</summary><p>Você recebe um código de acesso à plataforma logo após o pagamento. O material fica disponível durante todo o curso.</p></details>
 <details><summary>Posso contratar os complementos depois?</summary><p>Pode, nos valores avulsos. No pacote completo você garante os três de uma vez e o caminho inteiro planejado.</p></details>
-<details><summary>Qual a forma de pagamento?</summary><p>Pix ou cartão de crédito, pelo link de pagamento de cada opção.</p></details>
+<details><summary>Qual a forma de pagamento?</summary><p>Pix. Ao clicar em comprar, você recebe o QR code e o código "copia e cola" com o valor exato. Após pagar, envie o comprovante e receba seu código de acesso.</p></details>
 </div></section>
 
 <section class="hero" style="padding:72px 0"><div class="wrap">
@@ -208,6 +209,22 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 </div></section>
 
 <div class="foot"><div class="wrap">Luz &amp; Narrativa · Curso presencial individual · Contato: [e-mail ou WhatsApp]</div></div>
+</div>
+
+<!-- ============ PAGAR (PIX) ============ -->
+<div id="v-pay" class="view">
+<div class="login" style="max-width:560px">
+<a href="#/#oferta" style="font-size:14px;color:var(--muted)">← Voltar para a oferta</a>
+<p class="kicker" style="margin-top:14px">Pagamento via Pix</p>
+<h2 style="font-size:26px" id="payTitle"></h2>
+<div class="price" id="payAmount" style="margin:4px 0 14px"></div>
+<div style="text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px"><div id="payQr" style="display:inline-block"></div><p style="font-size:13px;color:var(--muted);margin:10px 0 0">Abra o app do seu banco, escolha Pix e leia o QR code</p></div>
+<p style="margin:18px 0 6px;font-weight:600">Ou use o Pix copia e cola</p>
+<textarea id="payCode" readonly style="width:100%;height:92px;font:13px/1.4 monospace;padding:10px;border:1px solid var(--line);border-radius:10px;resize:none"></textarea>
+<button class="btn" id="payCopy" style="width:100%;margin-top:8px">Copiar código Pix</button>
+<p style="font-size:14px;color:var(--muted);margin-top:16px">Chave Pix: <b>financeiro@pensegroove.com</b> · Favorecido: Pense Groove</p>
+<div class="box2" style="background:#fff5e6;border-color:#f3dcb4;color:#7a4b06;font-size:15px"><b>Depois de pagar:</b> envie o comprovante para <b>[WhatsApp ou e-mail]</b> com seu nome. Você recebe o código de acesso à plataforma e o contato para agendar o primeiro encontro.</div>
+</div>
 </div>
 
 <!-- ============ LOGIN ============ -->
@@ -239,6 +256,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 /* ====== CONFIGURAÇÃO (edite aqui) ======
    Cada código libera uma lista de cursos. Crie um código por aluno após confirmar o pagamento.
@@ -317,6 +335,7 @@ function show(id){document.querySelectorAll(".view").forEach(function(v){v.class
 function route(){
   var h=PATH;
   if(h.indexOf("/logout")===0){session=null;ls("ln-session","null");go("/");return}
+  if(h.indexOf("/pagar/")===0){renderPay(decodeURIComponent(h.slice(7)));show("v-pay");return}
   if(h.indexOf("/login")===0){show("v-login");return}
   if(h.indexOf("/app")===0){
     if(!session){go("/login");return}
@@ -384,15 +403,34 @@ function renderTools(){
   function upd(){var v=+r.value;document.getElementById("rOut").textContent=v+":1";sh.style.opacity=((v-1)/7*.85).toFixed(2);sh.setAttribute("x",side==="left"?"200":"80");document.getElementById("rDesc").textContent=desc(v)}
   r.oninput=upd;document.getElementById("sL").onclick=function(){side="left";upd()};document.getElementById("sR").onclick=function(){side="right";upd()};upd();
 }
+/* ====== PIX ====== */
+var PIX_KEY="financeiro@pensegroove.com", PIX_NAME="PENSE GROOVE", PIX_CITY="RIO DE JANEIRO";
+var ITEMS={iluminacao:{n:"Curso de iluminação",p:3750},equipamentos:{n:"Consultoria de equipamentos",p:690},narrativa:{n:"Curso de narrativa",p:890}};
+function tlv(id,v){var l=String(v.length);if(l.length<2)l="0"+l;return id+l+v}
+function crc16(str){var crc=0xFFFF;for(var i=0;i<str.length;i++){crc^=str.charCodeAt(i)<<8;for(var j=0;j<8;j++){crc=(crc&0x8000)?((crc<<1)^0x1021):(crc<<1);crc&=0xFFFF}}return crc.toString(16).toUpperCase().padStart(4,"0")}
+function brcode(amount,txid){var mai=tlv("00","br.gov.bcb.pix")+tlv("01",PIX_KEY);var s=tlv("00","01")+tlv("26",mai)+tlv("52","0000")+tlv("53","986")+tlv("54",amount.toFixed(2))+tlv("58","BR")+tlv("59",PIX_NAME)+tlv("60",PIX_CITY)+tlv("62",tlv("05",txid))+"6304";return s+crc16(s)}
+function renderPay(key){
+  var ids=key.split("+").filter(function(k){return ITEMS[k]});if(!ids.length){go("/");return}
+  var total=ids.reduce(function(a,k){return a+ITEMS[k].p},0);if(ids.length===3)total=BUNDLE_PRICE;
+  var title=ids.length===3?"Pacote completo":ids.map(function(k){return ITEMS[k].n}).join(" + ");
+  var txid=("LN"+ids.map(function(k){return k.slice(0,3).toUpperCase()}).join("")+Date.now().toString(36).toUpperCase()).slice(0,25);
+  var code=brcode(total,txid);
+  document.getElementById("payTitle").textContent=title;
+  document.getElementById("payAmount").textContent=brl(total);
+  document.getElementById("payCode").value=code;
+  var q=document.getElementById("payQr");q.innerHTML="";
+  try{new QRCode(q,{text:code,width:220,height:220,correctLevel:QRCode.CorrectLevel.M})}catch(e){q.textContent="QR indisponível, use o código abaixo."}
+  document.getElementById("payCopy").onclick=function(){var ta=document.getElementById("payCode");ta.select();try{navigator.clipboard.writeText(ta.value)}catch(e){document.execCommand("copy")}this.textContent="Copiado!";var b=this;setTimeout(function(){b.textContent="Copiar código Pix"},2000)};
+}
 /* ====== MONTE SEU PACOTE ====== */
 var LINKS = {
-  "iluminacao": "https://buy.stripe.com/test_eVq14o1dkf7qeMSdu78Vi00",
-  "equipamentos": "https://buy.stripe.com/test_dRmdRa2ho8J29sydu78Vi01",
-  "narrativa": "https://buy.stripe.com/test_9B6dRa09gaRa206cq38Vi02",
-  "iluminacao+equipamentos": "https://buy.stripe.com/test_9B65kE6xE3oI9sy0Hl8Vi03",
-  "iluminacao+narrativa": "https://buy.stripe.com/test_4gMeVe7BIgbueMS2Pt8Vi04",
-  "equipamentos+narrativa": "https://buy.stripe.com/test_4gM5kEg8e2kEbAGcq38Vi05",
-  "iluminacao+equipamentos+narrativa": "https://buy.stripe.com/test_cNifZi2hogbucEKfCf8Vi06"
+  "iluminacao": "#/pagar/iluminacao",
+  "equipamentos": "#/pagar/equipamentos",
+  "narrativa": "#/pagar/narrativa",
+  "iluminacao+equipamentos": "#/pagar/iluminacao+equipamentos",
+  "iluminacao+narrativa": "#/pagar/iluminacao+narrativa",
+  "equipamentos+narrativa": "#/pagar/equipamentos+narrativa",
+  "iluminacao+equipamentos+narrativa": "#/pagar/iluminacao+equipamentos+narrativa"
 };
 var BUNDLE_PRICE = 4997, BUNDLE_FULL = 5330;
 function brl(n){return "R$ "+n.toLocaleString("pt-BR")}
@@ -405,7 +443,7 @@ function calc(){
   if(sel.length===3){total=BUNDLE_PRICE;note.textContent="Preço de pacote aplicado: você economiza "+brl(BUNDLE_FULL-BUNDLE_PRICE)+".";}
   else if(sel.length===2){note.textContent="Falta 1 item para o preço de pacote (R$ 4.997 pelos três).";}
   else{note.textContent="";}
-  tot.textContent=brl(total);btn.textContent="Pagar "+brl(total);btn.setAttribute("href",LINKS[key]||"#");
+  tot.textContent=brl(total);btn.textContent="Pagar "+brl(total);btn.setAttribute("href","#/pagar/"+key);
 }
 document.querySelectorAll("#builder input[type=checkbox]").forEach(function(c){c.addEventListener("change",calc)});
 calc();
