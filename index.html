@@ -16,6 +16,18 @@ a{color:inherit}
 .logo{font-weight:800;letter-spacing:-.01em}
 .logo b{color:var(--amber)}
 .top nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;opacity:.9}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px;margin-right:-8px}
+.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.2s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:720px){
+.burger{display:block}
+.top nav{display:none;position:absolute;left:0;right:0;top:60px;background:var(--ink);flex-direction:column;padding:8px 24px 16px;border-top:1px solid #2c2c2a}
+.top nav.open{display:flex}
+.top nav a{margin:0;padding:14px 0;font-size:17px;border-bottom:1px solid #2c2c2a}
+.top nav a:last-child{border-bottom:0}
+}
 .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:14px 26px;border-radius:999px;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
 .btn:hover{background:#a80d26}
 .btn.ghost{background:transparent;border:1px solid #fff;color:#fff}
@@ -96,6 +108,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 
 <div class="top"><div class="wrap">
 <a href="#/" class="logo" style="text-decoration:none">LUZ <b>&amp;</b> NARRATIVA</a>
+<button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
 <nav id="topnav"><a href="#/#programa">Programa</a><a href="#/#oferta">Investimento</a><a href="#/login">Área do aluno</a></nav>
 </div></div>
 
@@ -151,22 +164,22 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <h3>Curso de iluminação</h3>
 <div class="price">R$ 3.750</div>
 <ul><li>4 encontros presenciais individuais</li><li>Plataforma com material e exercícios</li><li>Checklists de set para levar na gravação</li><li>Projeto final com feedback</li></ul>
-<a class="btn dark" href="#/pagar/iluminacao">Quero o curso</a>
+<a class="btn dark" href="https://wa.me/5521965971074?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Curso%20de%20ilumina%C3%A7%C3%A3o%20%28R%24%203.750%29.%20Pode%20me%20enviar%20o%20Pix%3F" target="_blank" rel="noopener">Quero o curso</a>
 </div>
 <div class="offer best">
 <h3>Pacote completo</h3>
 <div class="save">Os três juntos: o caminho inteiro, na ordem certa</div>
 <div class="price"><span class="strike" style="font-size:20px;font-weight:400">R$ 5.330</span><br>R$ 4.997 <small>à vista no Pix</small></div>
 <ul><li><b>Curso de iluminação</b> (R$ 3.750)</li><li><b>Consultoria de compra de equipamentos</b> (R$ 690)</li><li><b>Curso de narrativa</b> (R$ 890)</li><li>Acesso a todos os módulos na plataforma</li><li>Economia de R$ 333 em relação aos itens separados</li></ul>
-<a class="btn" href="#/pagar/iluminacao+equipamentos+narrativa">Quero o pacote completo</a>
+<a class="btn" href="https://wa.me/5521965971074?text=Ol%C3%A1%21%20Quero%20o%20Pacote%20completo%3A%20ilumina%C3%A7%C3%A3o%20%2B%20equipamentos%20%2B%20narrativa%20%28R%24%204.997%29.%20Pode%20me%20enviar%20o%20Pix%3F" target="_blank" rel="noopener">Quero o pacote completo</a>
 </div>
 <div class="offer">
 <h3>Complementos avulsos</h3>
 <div class="price">R$ 690 <small>equipamentos</small></div>
 <div class="price" style="margin-top:0">R$ 890 <small>narrativa</small></div>
 <ul><li><b>Consultoria de compra de equipamentos:</b> análise do que você já tem, do seu tipo de trabalho e do orçamento. Você recebe uma lista priorizada em três faixas (o essencial agora, o próximo passo e o que pode esperar), com o motivo de cada item e o que não comprar.</li><li><b>Curso de narrativa:</b> como estruturar um vídeo com começo, conflito e resolução, construir ritmo no roteiro e na montagem, escolher o que entra e o que sai, e usar luz, som e enquadramento a serviço da história.</li></ul>
-<a class="btn dark" href="#/pagar/equipamentos">Consultoria de equipamentos</a>
-<a class="btn dark" style="margin-top:8px" href="#/pagar/narrativa">Curso de narrativa</a>
+<a class="btn dark" href="https://wa.me/5521965971074?text=Ol%C3%A1%21%20Quero%20contratar%20a%20Consultoria%20de%20compra%20de%20equipamentos%20%28R%24%20690%29.%20Pode%20me%20enviar%20o%20Pix%3F" target="_blank" rel="noopener">Consultoria de equipamentos</a>
+<a class="btn dark" style="margin-top:8px" href="https://wa.me/5521965971074?text=Ol%C3%A1%21%20Quero%20me%20inscrever%20no%20Curso%20de%20narrativa%20%28R%24%20890%29.%20Pode%20me%20enviar%20o%20Pix%3F" target="_blank" rel="noopener">Curso de narrativa</a>
 </div>
 </div>
 <div class="offer" style="margin-top:28px;color:var(--ink)" id="builder">
@@ -179,10 +192,10 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 </div>
 <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px">
 <div><div style="font-size:13px;color:var(--muted)">Total</div><div class="price" style="margin:0" id="bTotal">R$ 3.750</div><div id="bNote" style="font-size:14px;color:#7a4b06;min-height:20px"></div></div>
-<a class="btn" id="bBtn" href="#/pagar/iluminacao">Pagar R$ 3.750</a>
+<a class="btn" id="bBtn" href="https://wa.me/5521965971074?text=Ol%C3%A1%21%20Quero%20garantir%20minha%20vaga%20no%20Curso%20de%20ilumina%C3%A7%C3%A3o%20%28R%24%203.750%29.%20Pode%20me%20enviar%20o%20Pix%3F" target="_blank" rel="noopener">Pagar R$ 3.750</a>
 </div>
 </div>
-<p style="color:#9a958b;font-size:14px;margin-top:22px">Após o pagamento, você recebe seu código de acesso à plataforma e o contato para agendar o primeiro encontro. Vagas individuais, limitadas pela agenda do professor.</p>
+<p style="color:#9a958b;font-size:14px;margin-top:22px">Ao clicar, você fala direto com a gente no WhatsApp e recebe o Pix. Após o pagamento, você recebe seu código de acesso à plataforma e agendamos o primeiro encontro. Vagas individuais, limitadas pela agenda do professor.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -200,7 +213,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <details><summary>Como funcionam os encontros?</summary><p>São individuais e presenciais, com data e horário combinados após a confirmação do pagamento.</p></details>
 <details><summary>Como acesso o material?</summary><p>Você recebe um código de acesso à plataforma logo após o pagamento. O material fica disponível durante todo o curso.</p></details>
 <details><summary>Posso contratar os complementos depois?</summary><p>Pode, nos valores avulsos. No pacote completo você garante os três de uma vez e o caminho inteiro planejado.</p></details>
-<details><summary>Qual a forma de pagamento?</summary><p>Pix. Ao clicar em comprar, você recebe o QR code e o código "copia e cola" com o valor exato. Após pagar, envie o comprovante e receba seu código de acesso.</p></details>
+<details><summary>Qual a forma de pagamento?</summary><p>Pix. Ao clicar em comprar, você é direcionado ao nosso WhatsApp, onde recebe os dados para pagamento. Após o pagamento, você recebe seu código de acesso à plataforma.</p></details>
 </div></section>
 
 <section class="hero" style="padding:72px 0"><div class="wrap">
@@ -208,7 +221,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <div class="cta"><a class="btn" href="#/#oferta">Garantir minha vaga</a></div>
 </div></section>
 
-<div class="foot"><div class="wrap">Luz &amp; Narrativa · Curso presencial individual · Contato: [e-mail ou WhatsApp]</div></div>
+<div class="foot"><div class="wrap">Luz &amp; Narrativa · Curso presencial individual · WhatsApp: (21) 96597-1074</div></div>
 </div>
 
 <!-- ============ PAGAR (PIX) ============ -->
@@ -223,7 +236,7 @@ input[type=text],input[type=email]{width:100%;padding:12px 14px;border:1px solid
 <textarea id="payCode" readonly style="width:100%;height:92px;font:13px/1.4 monospace;padding:10px;border:1px solid var(--line);border-radius:10px;resize:none"></textarea>
 <button class="btn" id="payCopy" style="width:100%;margin-top:8px">Copiar código Pix</button>
 <p style="font-size:14px;color:var(--muted);margin-top:16px">Chave Pix: <b>financeiro@pensegroove.com</b> · Favorecido: Pense Groove</p>
-<div class="box2" style="background:#fff5e6;border-color:#f3dcb4;color:#7a4b06;font-size:15px"><b>Depois de pagar:</b> envie o comprovante para <b>[WhatsApp ou e-mail]</b> com seu nome. Você recebe o código de acesso à plataforma e o contato para agendar o primeiro encontro.</div>
+<div class="box2" style="background:#fff5e6;border-color:#f3dcb4;color:#7a4b06;font-size:15px"><b>Depois de pagar:</b> envie o comprovante para <b>WhatsApp (21) 96597-1074</b> com seu nome. Você recebe o código de acesso à plataforma e o contato para agendar o primeiro encontro.</div>
 </div>
 </div>
 
@@ -351,8 +364,11 @@ function route(){
   var anchor=h.split("#")[1];
   if(anchor){var el=document.getElementById(anchor);if(el)setTimeout(function(){el.scrollIntoView({behavior:"smooth"})},50)}
 }
+var burger=document.getElementById("burger"),topnav=document.getElementById("topnav");
+burger.addEventListener("click",function(){var o=topnav.classList.toggle("open");burger.classList.toggle("open",o);burger.setAttribute("aria-expanded",o)});
 document.addEventListener("click",function(e){
   var a=e.target.closest("a");if(!a)return;
+  if(topnav.classList.contains("open")){topnav.classList.remove("open");burger.classList.remove("open");burger.setAttribute("aria-expanded","false")}
   var href=a.getAttribute("href")||"";
   if(href.indexOf("#/")===0){e.preventDefault();go(href.slice(1))}
 });
@@ -443,7 +459,7 @@ function calc(){
   if(sel.length===3){total=BUNDLE_PRICE;note.textContent="Preço de pacote aplicado: você economiza "+brl(BUNDLE_FULL-BUNDLE_PRICE)+".";}
   else if(sel.length===2){note.textContent="Falta 1 item para o preço de pacote (R$ 4.997 pelos três).";}
   else{note.textContent="";}
-  tot.textContent=brl(total);btn.textContent="Pagar "+brl(total);btn.setAttribute("href","#/pagar/"+key);
+  tot.textContent=brl(total);btn.textContent="Pagar "+brl(total);var names=sel.map(function(k){return ITEMS[k].n}).join(" + ");btn.setAttribute("href","https://wa.me/5521965971074?text="+encodeURIComponent("Olá! Quero contratar: "+names+" ("+brl(total)+"). Pode me enviar o Pix?"));btn.setAttribute("target","_blank");
 }
 document.querySelectorAll("#builder input[type=checkbox]").forEach(function(c){c.addEventListener("change",calc)});
 calc();
